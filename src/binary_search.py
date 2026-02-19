@@ -1,4 +1,6 @@
-def contains(key, data):
+from collections.abc import Collection
+
+def contains(key, data: Collection) -> bool:
     """
     :param key: The key being searched for
     :param data: A sequence of keys in increasing order
@@ -17,6 +19,8 @@ def contains(key, data):
     return False
 
 
-d = list(range(6))
+# d = list(range(6))
+# d = ['a', 'b', 'c', 'd']
+d = 'abcd'
 for i in d:
     assert contains(i, d)
